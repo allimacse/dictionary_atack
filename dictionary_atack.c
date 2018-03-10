@@ -18,6 +18,13 @@ int main(int argc, char const *argv[]){
 	char *username;
 	char *fullpass;
 	char salt[20];
+
+	//Its for a format
+	if (argc != 2)
+    {
+        printf("Usage: ./file <user>\n");
+        return 1;
+    }
 	
 	//create a file called shadow of /etx/shadow
 	system(" sudo grep \'\\$6\\$\' /etc/shadow > shadow.txt");
